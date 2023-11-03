@@ -1,0 +1,59 @@
+{
+  "name": "boilerplate-http-server",
+  "version": "1.0.0",
+  "description": "A Boilerplate HTTP server using TS, Express.js and other usefull technologies",
+  "main": "./dist/server.js",
+  "scripts": {
+    "build:server:dev": "rm -Rf dist; ./node_modules/typescript/bin/tsc -w -p .",
+    "build:server": "NODE_ENV=production ./node_modules/.bin/tsc -p .",
+    "server:dev": "NODE_ENV=development ./node_modules/.bin/nodemon -w dist -w config -w customers dist/server.js scidaaa",
+    "server:production": "NODE_ENV=production node dist/server.js scidaaa",
+    "stop": "pkill -SIGINT scidaaa"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ilpadrello/boilerplate-http-server.git"
+  },
+  "keywords": [
+    "Http",
+    "Boilerplate",
+    "Typescript",
+    "Express.js"
+  ],
+  "author": "Simone Panebianco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ilpadrello/boilerplate-http-server/issues"
+  },
+  "homepage": "https://github.com/ilpadrello/boilerplate-http-server#readme",
+  "dependencies": {
+    "@types/uuid": "*",
+    "axios": "*",
+    "compression": "*",
+    "cookie-parser": "*",
+    "cors": "*",
+    "dotenv": "*",
+    "express": "*",
+    "express-validator": "*",
+    "figlet": "*",
+    "fs-extra": "*",
+    "helmet": "*",
+    "helmet-csp": "*",
+    "typescript": "*",
+    "uuid": "*",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/compression": "*",
+    "@types/cookie-parser": "*",
+    "@types/cors": "*",
+    "@types/express": "*",
+    "@types/figlet": "*",
+    "@types/fs-extra": "*",
+    "@typescript-eslint/eslint-plugin": "*",
+    "@typescript-eslint/parser": "*",
+    "eslint": "*",
+    "eslint-plugin-import": "*",
+    "nodemon": "*"
+  }
+}
