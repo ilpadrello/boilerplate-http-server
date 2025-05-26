@@ -1,2 +1,2 @@
-import baseSchema from './basicConfig'
-export default baseSchema
+import baseSchema from './basicConfig';
+export default baseSchema;
