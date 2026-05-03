@@ -8,6 +8,6 @@ if (!dbconfig) {
   throw new Error("Couldn't find configuration for Database");
 }
 
-const knex = Knex(dbconfig);
+const knex = undefined; // = Knex(dbconfig);
 
 export default knex;

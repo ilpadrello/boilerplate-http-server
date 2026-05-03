@@ -53,7 +53,7 @@ const levelColors: {
   error: ansi.color.red,
 };
 const global_min_level_number = levels.indexOf(
-  config.log?.globalMinlevel || 'info'
+  config.log?.globalMinlevel || 'info',
 );
 
 const getCorrectMinLevel = (transport_min_level: Logger.Level) => {
@@ -101,6 +101,7 @@ export default class Logger {
         case 'database':
           if (_is_correct_level(key, options.level))
             await this._logDatabase(options);
+          break;
         default:
           break;
       }
@@ -113,7 +114,7 @@ export default class Logger {
         levelColors[options.level]
       } ${options.level.padEnd(10, ' ')} ${ansi.color.yellow} ${
         options.component
-      } \x1b[0m${options.message} ${ansi.reset}`
+      } \x1b[0m${options.message} ${ansi.reset}`,
     );
     if (options.data) {
       //console.log(options.data);

@@ -4,7 +4,7 @@ import Logger from '../libs/logger';
 export default (
   request: Request,
   response: Response,
-  next: NextFunction
+  next: NextFunction,
 ): void => {
   const start = Date.now();
   const logger = new Logger({

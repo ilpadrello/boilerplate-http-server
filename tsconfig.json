@@ -26,11 +26,11 @@
 
     /* Modules */
     "module": "ES2020",
-    "rootDir": "./src",
+    "rootDir": "./ts",
     "moduleResolution": "node",
     "baseUrl": "./",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["ts/*"]
     },
     // "rootDirs": [],
     // "typeRoots": [],
@@ -104,6 +104,6 @@
     // "skipDefaultLibCheck": true,
     "skipLibCheck": true
   },
-  "include": ["src/**/*"],
+  "include": ["ts/**/*"],
   "exclude": ["node_modules", "build", "dist"]
 }
